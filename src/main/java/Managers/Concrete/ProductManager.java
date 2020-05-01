@@ -1,12 +1,11 @@
-package Managers;
+package Managers.Concrete;
 
 import Communication.Input;
 import Communication.Output;
 import Data.Enums.Menus.EProductMenuCommand;
+import Managers.Abstract.AbstractHandler;
 
-public class ProductManager {
-    private Output printer = new Output();
-    private Input listener = new Input();
+public class ProductManager extends AbstractHandler {
 
     public void requestAction() {
         printer.printUserMenu();

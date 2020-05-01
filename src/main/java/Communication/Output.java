@@ -1,8 +1,7 @@
 package Communication;
 
 import Data.Enums.Menus.*;
-import Entities.Primary.User;
-import Managers.SessionManager;
+import Managers.Concrete.SessionManager;
 
 public class Output {
     public void printGenericmenu() {

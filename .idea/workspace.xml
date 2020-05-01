@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99eb9585-b889-49f6-b0c9-08cbf45011a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Managers/Abstract/AbstractHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/GeneralHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TraderInstance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BelastingTrade.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BelastingTrade.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Communication/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Communication/Output.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/PasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/PasswordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Joins/MediaKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Joins/MediaKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Primary/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Primary/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Primary/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Primary/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Secondary/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Secondary/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Secondary/MediaFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Secondary/MediaFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/ProcessManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/ProcessManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/ProcessManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProcessManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/SessionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,12 +111,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588313867551</updated>
-      <workItem from="1588313888498" duration="11460000" />
+      <workItem from="1588313888498" duration="13007000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1588342776820</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588342776820</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588317706394">

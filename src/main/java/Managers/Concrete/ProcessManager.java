@@ -1,17 +1,15 @@
-package Managers;
+package Managers.Concrete;
 
 import Communication.Input;
 import Communication.Output;
 import Controllers.PasswordController;
-import Data.Enums.Menus.EAccountCommand;
 import Data.Enums.Menus.EPersonalMenuCommand;
-import Data.Enums.Menus.EProductMenuCommand;
 import Entities.DAO.UserDAO;
 import Entities.Primary.User;
+import Managers.Abstract.AbstractHandler;
 
-public class ProcessManager {
-    private Output printer = new Output();
-    private Input listener = new Input();
+public class ProcessManager extends AbstractHandler {
+
 
     public void login() {
         String email = listener.getInput("Please enter your email.");

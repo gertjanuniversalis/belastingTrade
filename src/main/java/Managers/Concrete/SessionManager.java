@@ -1,4 +1,4 @@
-package Managers;
+package Managers.Concrete;
 
 import Data.Session;
 import Entities.Primary.User;
