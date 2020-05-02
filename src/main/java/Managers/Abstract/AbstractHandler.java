@@ -4,6 +4,6 @@ import Communication.Input;
 import Communication.Output;
 
 public abstract class AbstractHandler {
-    protected Output printer = new Output();
-    protected Input listener = new Input();
+    protected static Output printer = new Output();
+    protected static Input listener = new Input();
 }

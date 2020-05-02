@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99eb9585-b889-49f6-b0c9-08cbf45011a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Managers/Abstract/AbstractHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/GeneralHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TraderInstance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Communication/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Communication/Output.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/ProcessManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProcessManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/SessionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="cdi.beans_1_1" />
         <option value="Class" />
       </list>
     </option>
@@ -79,6 +72,20 @@
       <recent name="C:\Users\Gebruiker\IdeaProjects\BelastingTrade\src\main\java\Entities\Primary" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="BelastingTrade" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -111,7 +118,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588313867551</updated>
-      <workItem from="1588313888498" duration="13007000" />
+      <workItem from="1588313888498" duration="14220000" />
+      <workItem from="1588411926631" duration="1953000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1588342776820</created>
@@ -120,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588342776820</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created an abstracthandler, and moved the primary run from Main to a generalHandler">
+      <created>1588345588099</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588345588099</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added persistence.xml and fixed a bug in the action selector">
+      <created>1588413861526</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588413861526</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,45 +150,51 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="Created an abstracthandler, and moved the primary run from Main to a generalHandler" />
+    <MESSAGE value="Added persistence.xml and fixed a bug in the action selector" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added persistence.xml and fixed a bug in the action selector" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588317706394">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588317706394" />
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1588332637465">
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1588411488212">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588332637464" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588411488212" />
     <state x="193" y="54" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588341212046">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="193" y="54" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588341212046" />
-    <state x="568" y="114" key="CommitChangelistDialog2" timestamp="1588342792169">
+    <state x="568" y="114" key="CommitChangelistDialog2" timestamp="1588413860315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="568" y="114" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588342792169" />
-    <state width="1293" height="282" key="GridCell.Tab.0.bottom" timestamp="1588335788498">
+    <state x="568" y="114" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413860315" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1588413628331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588335788498" />
-    <state width="1293" height="282" key="GridCell.Tab.0.center" timestamp="1588335788498">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413628331" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1588413628331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588335788498" />
-    <state width="1293" height="282" key="GridCell.Tab.0.left" timestamp="1588335788498">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413628331" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1588413628331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588335788498" />
-    <state width="1293" height="282" key="GridCell.Tab.0.right" timestamp="1588335788498">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413628331" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1588413628331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="282" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588335788498" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413628331" />
     <state x="540" y="255" key="IDE.errors.dialog" timestamp="1588335376855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="255" key="IDE.errors.dialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588335376855" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588345590645">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345590645" />
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1588317944703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -179,5 +207,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588335812645" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/App.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

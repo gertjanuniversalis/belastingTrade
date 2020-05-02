@@ -3,7 +3,11 @@ package Managers.Concrete;
 import Communication.Input;
 import Communication.Output;
 import Data.Enums.Menus.EProductMenuCommand;
+import Entities.DAO.ProductDAO;
+import Entities.Primary.Product;
 import Managers.Abstract.AbstractHandler;
+
+import java.util.List;
 
 public class ProductManager extends AbstractHandler {
 
@@ -14,13 +18,13 @@ public class ProductManager extends AbstractHandler {
     }
 
     private void handleInput(String commandStr) {
-        try{
+        try {
             int commandInt = Integer.parseInt(commandStr);
-            EProductMenuCommand command = EProductMenuCommand.fromOrdinal(commandInt);
+            EProductMenuCommand command = EProductMenuCommand.fromOrdinal(commandInt - 1);
 
             switch (command) {
                 case Place_product:
-                    placeNewProduct();
+//                    placeNewProduct();
                     return;
                 case Edit_product:
                     //todo: implement
@@ -34,6 +38,15 @@ public class ProductManager extends AbstractHandler {
             }
         } catch (NumberFormatException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void printOwnedProducts() {
+        List<Product> ownedProducts = new ProductDAO().getOwnedProducts();
+
+        for (Product product :
+                ownedProducts) {
+            printer.print(product.toString());
         }
     }
 }

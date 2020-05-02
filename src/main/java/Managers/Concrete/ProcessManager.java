@@ -10,7 +10,6 @@ import Managers.Abstract.AbstractHandler;
 
 public class ProcessManager extends AbstractHandler {
 
-
     public void login() {
         String email = listener.getInput("Please enter your email.");
         String password = listener.getInput("Please enter your password.");
@@ -18,7 +17,7 @@ public class ProcessManager extends AbstractHandler {
         try {
             User user = new UserDAO().getUserByEmail(email);
 
-            if(new PasswordController().isPasswordCorrect(user, password)){
+            if (new PasswordController().isPasswordCorrect(user, password)) {
                 SessionManager.setUser(user);
                 printer.welcome(user.getName());
             } else {
@@ -40,9 +39,9 @@ public class ProcessManager extends AbstractHandler {
     }
 
     private void handleInput(String commandStr) {
-        try{
+        try {
             int commandInt = Integer.parseInt(commandStr);
-            EPersonalMenuCommand command = EPersonalMenuCommand.fromOrdinal(commandInt);
+            EPersonalMenuCommand command = EPersonalMenuCommand.fromOrdinal(commandInt - 1);
 
             switch (command) {
                 case Products:

@@ -19,7 +19,7 @@ public class GeneralHandler extends AbstractHandler {
     private void handleInput(String inputStr) {
         try {
             int commandInt = Integer.parseInt(inputStr);
-            EGenericMenuCommand command = EGenericMenuCommand.fromOrdinal(commandInt);
+            EGenericMenuCommand command = EGenericMenuCommand.fromOrdinal(commandInt - 1);
 
             switch (command) {
                 case Login:

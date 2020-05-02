@@ -25,4 +25,8 @@ public class SessionManager {
     public static void setUser(User user) {
         Session.activeUser = user;
     }
+
+    public static User getUser() {
+        return Session.activeUser;
+    }
 }

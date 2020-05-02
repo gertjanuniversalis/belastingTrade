@@ -19,34 +19,50 @@ public class Product {
     @Getter
     private int id;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     @NotBlank
     private String name;
-    @Getter @Setter
+    @Getter
+    @Setter
     @PositiveOrZero
     private double price;
-    @Getter @Setter
+    @Getter
+    @Setter
     private String description;
     @Getter
     @PastOrPresent
     private Date datePlaced = new Date();
-    @Getter @Setter
+    @Getter
+    @Setter
     private boolean inStore;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @NotNull
     private User placedBy;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     @ManyToOne
     private User soldTo;
 
-    @Getter @Setter
+    @Getter
+    @Setter
     @OneToMany(mappedBy = "product")
     private Set<MediaFile> media;
 
-    public Product(){}
+    public Product() {
+    }
 
-
+    @Override
+    public String toString() {
+        return "name='" + name + "\n" +
+                        ", price=" + price + "\n" +
+                        ", description='" + description + "\n" +
+                        ", datePlaced=" + datePlaced + "\n" +
+                        ", inStore=" + inStore + "\n" +
+                        ", soldTo=" + soldTo + "\n";
+    }
 }
