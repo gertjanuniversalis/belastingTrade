@@ -1,8 +1,7 @@
 package Managers.Concrete;
 
-import Communication.Input;
-import Communication.Output;
 import Controllers.PasswordController;
+import Data.Enums.EGender;
 import Data.Enums.Menus.EPersonalMenuCommand;
 import Entities.DAO.UserDAO;
 import Entities.Primary.User;
@@ -11,8 +10,8 @@ import Managers.Abstract.AbstractHandler;
 public class ProcessManager extends AbstractHandler {
 
     public void login() {
-        String email = listener.getInput("Please enter your email.");
-        String password = listener.getInput("Please enter your password.");
+        String email = listener.getString("Please enter your email.");
+        String password = listener.getString("Please enter your password.");
 
         try {
             User user = new UserDAO().getUserByEmail(email);
@@ -29,12 +28,25 @@ public class ProcessManager extends AbstractHandler {
     }
 
     public void signUp() {
-        //todo: implement
+        printer.print("Choose a name");
+        String name = listener.getString();
+        printer.print("Enter your email");
+        String email = listener.getString();
+        printer.print("provide your gender (1=male, 2=female");
+        int gender = listener.getInt();
+
+        User user = new User(email, name, EGender.fromOrdinal(gender));
+
+        int userID = new UserDAO().insertUser(user);
+
+        if(userID > 0){
+            new PasswordController().assignPassword(user);
+        }
     }
 
     public void requestAction() {
         printer.printUserMenu();
-        int commandInt = listener.getCommand();
+        int commandInt = listener.getInt();
         handleInput(commandInt);
     }
 

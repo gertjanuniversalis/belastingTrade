@@ -1,6 +1,5 @@
 package Managers.Concrete;
 
-import Communication.Input;
 import Data.Enums.Menus.EGenericMenuCommand;
 import Managers.Abstract.AbstractHandler;
 
@@ -9,7 +8,7 @@ public class GeneralHandler extends AbstractHandler {
     public void requestAction() {
         if (!SessionManager.isLoggedIn()) {
             printer.printGenericmenu();
-            int commandInt = listener.getCommand();
+            int commandInt = listener.getInt();
             handleInput(commandInt);
         } else {
             new ProcessManager().requestAction();

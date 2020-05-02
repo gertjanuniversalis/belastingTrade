@@ -10,23 +10,24 @@ public class Input {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    public String getInput(){
+    public String getString(){
         String input = scanner.nextLine();
         String cleanInput = validator.cleanInput(input);
         return cleanInput;
     }
-    public String getInput(String question){
+    public String getString(String question){
         printer.print(question);
-        return getInput();
+        return getString();
     }
 
-    public int getCommand(){
-        int commandInt = scanner.nextInt();
-        return commandInt;
+    public int getInt(){
+        int inputInt = scanner.nextInt();
+        scanner.nextLine(); //This is needed to accept a next string input normally
+        return inputInt;
     }
 
-    public int getCommand(String question){
+    public int getInt(String question){
         printer.print(question);
-        return getCommand();
+        return getInt();
     }
 }

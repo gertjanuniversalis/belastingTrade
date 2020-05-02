@@ -27,4 +27,18 @@ public class UserDAO extends DAOBase {
             return null;
         }
     }
+
+    public int insertUser(User user){
+        try{
+            manager().getTransaction().begin();
+            manager().persist(user);
+            manager().getTransaction().commit();
+
+            return user.getId();
+        } catch (Exception e){
+            e.getMessage();
+            manager().getTransaction().rollback();
+            return -1;
+        }
+    }
 }

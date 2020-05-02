@@ -1,7 +1,5 @@
 package Managers.Concrete;
 
-import Communication.Input;
-import Communication.Output;
 import Data.Enums.Menus.EProductMenuCommand;
 import Entities.DAO.ProductDAO;
 import Entities.Primary.Product;
@@ -13,7 +11,7 @@ public class ProductManager extends AbstractHandler {
 
     public void requestAction() {
         printer.printProductMenu();
-        int commandInt = listener.getCommand();
+        int commandInt = listener.getInt();
         handleInput(commandInt);
     }
 
@@ -23,7 +21,7 @@ public class ProductManager extends AbstractHandler {
 
             switch (command) {
                 case Place_product:
-//                    placeNewProduct();
+                    placeNewProduct();
                     return;
                 case Edit_product:
                     //todo: implement
@@ -38,6 +36,10 @@ public class ProductManager extends AbstractHandler {
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
+    }
+
+    private void placeNewProduct() {
+        //todo: implement
     }
 
     private void printOwnedProducts() {

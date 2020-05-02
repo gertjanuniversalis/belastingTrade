@@ -14,4 +14,11 @@ public class PasswordContainer {
 
     @Getter @Setter
     private String password;
+
+    public PasswordContainer(){}
+
+    public PasswordContainer(int id, String generatedPass) {
+        this.userId = id;
+        this.password = generatedPass;
+    }
 }

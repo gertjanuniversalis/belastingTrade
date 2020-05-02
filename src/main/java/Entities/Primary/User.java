@@ -51,4 +51,10 @@ public class User {
     Set<MediaFile> media;
 
     public User(){}
+
+    public User(String email, String name, EGender gender){
+        this.email = email;
+        this.name = name;
+        this.gender = gender;
+    }
 }

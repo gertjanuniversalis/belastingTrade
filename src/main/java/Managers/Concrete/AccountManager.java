@@ -1,13 +1,12 @@
 package Managers.Concrete;
 
 import Data.Enums.Menus.EAccountCommand;
-import Data.Enums.Menus.EPersonalMenuCommand;
 import Managers.Abstract.AbstractHandler;
 
 public class AccountManager extends AbstractHandler {
     public void requestAction() {
         printer.printAccountMenu();
-        int commandInt = listener.getCommand();
+        int commandInt = listener.getInt();
         handleInput(commandInt);
     }
 
