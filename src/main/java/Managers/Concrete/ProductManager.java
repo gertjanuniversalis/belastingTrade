@@ -12,14 +12,13 @@ import java.util.List;
 public class ProductManager extends AbstractHandler {
 
     public void requestAction() {
-        printer.printUserMenu();
-        String commandStr = listener.getInput();
-        handleInput(commandStr);
+        printer.printProductMenu();
+        int commandInt = listener.getCommand();
+        handleInput(commandInt);
     }
 
-    private void handleInput(String commandStr) {
+    private void handleInput(int commandInt) {
         try {
-            int commandInt = Integer.parseInt(commandStr);
             EProductMenuCommand command = EProductMenuCommand.fromOrdinal(commandInt - 1);
 
             switch (command) {

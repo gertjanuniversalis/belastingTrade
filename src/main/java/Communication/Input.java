@@ -19,4 +19,14 @@ public class Input {
         printer.print(question);
         return getInput();
     }
+
+    public int getCommand(){
+        int commandInt = scanner.nextInt();
+        return commandInt;
+    }
+
+    public int getCommand(String question){
+        printer.print(question);
+        return getCommand();
+    }
 }

@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99eb9585-b889-49f6-b0c9-08cbf45011a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Communication/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Communication/Output.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/EDeliveryTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelastingTrade.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BelastingTrade.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Communication/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Communication/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/DAO/DAOBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/DAO/DAOBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Concrete/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/AccountManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Concrete/GeneralHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/GeneralHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProcessManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProcessManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/percistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +46,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="cdi.beans_1_1" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -66,8 +76,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Gebruiker\IdeaProjects\BelastingTrade\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Gebruiker\IdeaProjects\BelastingTrade\src\main\java\Entities\Primary" />
     </key>
@@ -119,7 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588313867551</updated>
       <workItem from="1588313888498" duration="14220000" />
-      <workItem from="1588411926631" duration="1953000" />
+      <workItem from="1588411926631" duration="6873000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1588342776820</created>
@@ -142,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588413861526</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added persistence.xml and fixed a bug in the action selector">
+      <created>1588413894055</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588413894055</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,34 +188,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="193" y="54" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588341212046" />
-    <state x="568" y="114" key="CommitChangelistDialog2" timestamp="1588413860315">
+    <state x="568" y="114" key="CommitChangelistDialog2" timestamp="1588413893155">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="568" y="114" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413860315" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1588413628331">
+    <state x="568" y="114" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413893155" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1588420425701">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413628331" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1588413628331">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588420425701" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1588420425701">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413628331" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1588413628331">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588420425701" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1588420425701">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413628331" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1588413628331">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588420425701" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1588420425701">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413628331" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588420425701" />
     <state x="540" y="255" key="IDE.errors.dialog" timestamp="1588335376855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="255" key="IDE.errors.dialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588335376855" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588345590645">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588413897923">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588345590645" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413897923" />
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1588317944703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -215,6 +236,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/App.java</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Entities/DAO/UserDAO.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

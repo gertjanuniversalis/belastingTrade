@@ -34,13 +34,12 @@ public class ProcessManager extends AbstractHandler {
 
     public void requestAction() {
         printer.printUserMenu();
-        String commandStr = listener.getInput();
-        handleInput(commandStr);
+        int commandInt = listener.getCommand();
+        handleInput(commandInt);
     }
 
-    private void handleInput(String commandStr) {
+    private void handleInput(int commandInt) {
         try {
-            int commandInt = Integer.parseInt(commandStr);
             EPersonalMenuCommand command = EPersonalMenuCommand.fromOrdinal(commandInt - 1);
 
             switch (command) {

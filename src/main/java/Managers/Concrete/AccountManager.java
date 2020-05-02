@@ -1,29 +1,32 @@
 package Managers.Concrete;
 
+import Data.Enums.Menus.EAccountCommand;
 import Data.Enums.Menus.EPersonalMenuCommand;
 import Managers.Abstract.AbstractHandler;
 
 public class AccountManager extends AbstractHandler {
     public void requestAction() {
         printer.printAccountMenu();
-        String commandStr = listener.getInput();
-        handleInput(commandStr);
+        int commandInt = listener.getCommand();
+        handleInput(commandInt);
     }
 
-    private void handleInput(String commandStr) {
+    private void handleInput(int commandInt) {
         try {
-            int commandInt = Integer.parseInt(commandStr);
-            EPersonalMenuCommand command = EPersonalMenuCommand.fromOrdinal(commandInt - 1);
+            EAccountCommand command = EAccountCommand.fromOrdinal(commandInt - 1);
 
             switch (command) {
-                case Products:
-                    //todo: write
+                case Change_password:
                     break;
-                case Account:
-                    //todo: write
+                case Change_name:
+                    break;
+                case Change_delivery_mode:
+                    break;
+                case View_delivery_modes:
+                    break;
+                case Back:
                     break;
                 case Logout:
-                    SessionManager.logout();
                     break;
             }
         } catch (NumberFormatException e) {

@@ -9,16 +9,15 @@ public class GeneralHandler extends AbstractHandler {
     public void requestAction() {
         if (!SessionManager.isLoggedIn()) {
             printer.printGenericmenu();
-            String inputStr = listener.getInput();
-            handleInput(inputStr);
+            int commandInt = listener.getCommand();
+            handleInput(commandInt);
         } else {
             new ProcessManager().requestAction();
         }
     }
 
-    private void handleInput(String inputStr) {
+    private void handleInput(int commandInt) {
         try {
-            int commandInt = Integer.parseInt(inputStr);
             EGenericMenuCommand command = EGenericMenuCommand.fromOrdinal(commandInt - 1);
 
             switch (command) {
