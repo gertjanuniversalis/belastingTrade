@@ -2,17 +2,17 @@ package Managers.Concrete;
 
 import Controllers.Concrete.PasswordController;
 import Data.Enums.EGender;
-import Data.Enums.Menus.EPersonalMenuCommand;
-import Data.Messages;
 import Entities.DAO.UserDAO;
 import Entities.Primary.User;
 import Managers.Abstract.AbstractHandler;
 
+import static Data.Enums.EMessage.*;
+
 public class ProcessManager extends AbstractHandler {
 
     public void login() {
-        String email = listener.getString("Please enter your email.");
-        String password = listener.getString("Please enter your password.");
+        String email = listener.getString(EnterKnownMail);
+        String password = listener.getString(EnterKnownPass);
 
         try {
             User user = new UserDAO().getUserByEmail(email);
@@ -21,7 +21,7 @@ public class ProcessManager extends AbstractHandler {
                 SessionManager.setUser(user);
                 printer.welcome(user.getName());
             } else {
-                printer.print(Messages.incorrectLogin);
+                printer.print(IncorrectLogin);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -29,12 +29,9 @@ public class ProcessManager extends AbstractHandler {
     }
 
     public void signUp() {
-        printer.print("Choose a name");
-        String name = listener.getString();
-        printer.print("Enter your email");
-        String email = listener.getString();
-        printer.print("provide your gender (1=male, 2=female");
-        int gender = listener.getInt();
+        String name = listener.getString(SupplyDisplayName);
+        String email = listener.getString(SupplyMail);
+        int gender = listener.getInt(SupplyGender);
 
         User user = new User(email, name, EGender.fromOrdinal(gender));
 
@@ -43,7 +40,7 @@ public class ProcessManager extends AbstractHandler {
         if(userID > 0){
             new PasswordController().assignPassword(user);
 
-            printer.print(Messages.welcome);
+            printer.print(SignupSuccess);
         }
     }
 

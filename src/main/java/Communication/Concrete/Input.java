@@ -1,6 +1,8 @@
 package Communication.Concrete;
 
 import Communication.Interfaces.IInput;
+import Data.Enums.EMessage;
+import Data.Messages;
 import Util.InputValidator;
 
 import java.util.Scanner;
@@ -21,6 +23,11 @@ public class Input implements IInput {
         return getString();
     }
 
+    @Override
+    public String getString(EMessage message) {
+        return getString(Messages.getMessage(message));
+    }
+
     public int getInt(){
         int inputInt = scanner.nextInt();
         scanner.nextLine(); //This is needed to accept a next string input normally
@@ -30,5 +37,10 @@ public class Input implements IInput {
     public int getInt(String question){
         printer.print(question);
         return getInt();
+    }
+
+    @Override
+    public int getInt(EMessage message) {
+        return getInt(Messages.getMessage(message));
     }
 }

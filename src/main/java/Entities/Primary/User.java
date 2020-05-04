@@ -1,8 +1,6 @@
 package Entities.Primary;
 
-import Data.Enums.EDeliveryType;
-import Data.Enums.EGender;
-import Data.Enums.EAccountType;
+import Data.Enums.*;
 import Data.Enums.EDeliveryType;
 import Entities.Secondary.Address;
 import Entities.Secondary.MediaFile;
@@ -15,6 +13,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+
+import static javax.persistence.EnumType.STRING;
 
 @Entity
 public class User {
@@ -31,16 +31,19 @@ public class User {
     @Getter @Setter
     protected String lastName;
     @Getter @Setter
-    @Enumerated(value = EnumType.STRING)
+    @Enumerated(value = STRING)
     protected EGender gender;
     @Getter @Setter
-    @Enumerated(value = EnumType.STRING)
+    @Enumerated(value = STRING)
     protected EAccountType accountType;
+    @Getter @Setter
+    @Enumerated(value = STRING)
+    protected ELanguage language = ELanguage.English;
 
 
     @Getter @Setter
     @ElementCollection
-    @Enumerated(value = EnumType.STRING)
+    @Enumerated(value = STRING)
     protected List<EDeliveryType> deliveryTypes;
 
     @Getter @Setter

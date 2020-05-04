@@ -2,21 +2,22 @@ package Managers.Concrete;
 
 import Controllers.Concrete.PasswordController;
 import Data.Enums.EDeliveryType;
-import Data.Messages;
 import Entities.DAO.UserDAO;
 import Entities.Primary.User;
-import Entities.Secondary.PasswordContainer;
 import Managers.Abstract.AbstractHandler;
 import Util.Converter;
 
 import java.util.*;
+
+import static Data.Enums.EMessage.*;
+import static Data.Messages.getMessage;
 
 public class AccountManager extends AbstractHandler {
     public void editDeliveryModes() {
         User user = SessionManager.getUser();
 
         printer.printPossibleDeliveries();
-        String wantedDeliveryString = listener.getString(Messages.requestDeliveryTypes);
+        String wantedDeliveryString = listener.getString(RequestDeliveryTypes);
 
         if (!wantedDeliveryString.isEmpty()) {
             List<EDeliveryType> typeList = new ArrayList<>();
@@ -26,19 +27,19 @@ public class AccountManager extends AbstractHandler {
                 typeList.add(EDeliveryType.fromOrdinal(typeInt - 1));
             }
 
-            if(!addressNeededAndMissing(typeList)) {
+            if (!addressNeededAndMissing(typeList)) {
                 user.setDeliveryTypes(typeList);
                 new UserDAO().updateUser(user);
                 SessionManager.setUser(user);
             } else {
-                printer.print(Messages.addressNeeded);
+                printer.print(AddressNeeded);
             }
         }
     }
 
     private boolean addressNeededAndMissing(List<EDeliveryType> typeList) {
-        if (typeList.contains(EDeliveryType.Pickup_from_home)){
-            if(SessionManager.getUser().getAddress() == null){
+        if (typeList.contains(EDeliveryType.Pickup_from_home)) {
+            if (SessionManager.getUser().getAddress() == null) {
                 return true;
             }
         }
@@ -48,32 +49,32 @@ public class AccountManager extends AbstractHandler {
     public void displayCurrentDeliveryModes() {
         List<EDeliveryType> currentTypes = SessionManager.getUser().getDeliveryTypes();
         if (!currentTypes.isEmpty()) {
-            StringBuilder builder = new StringBuilder("Your current delivery modes are:\n");
+            StringBuilder builder = new StringBuilder(getMessage(DeliveryTypeList));
             for (EDeliveryType type : currentTypes) {
                 builder.append("-\t" + type.name() + "\n");
             }
             printer.print(builder.toString());
         } else {
-            printer.print(Messages.noDeliverySet);
+            printer.print(NoDeliverySet);
         }
     }
 
     public void changePass() {
-        String currentPass = listener.getString(Messages.securityConfirm);
+        String currentPass = listener.getString(SecurityConfirm);
         PasswordController passCon = new PasswordController();
 
-        if(passCon.isPasswordCorrect(currentPass)){
-            String newPassOne = listener.getString(Messages.enterNewPass);
-            String newPassTwo = listener.getString(Messages.confirmNewPass);
+        if (passCon.isPasswordCorrect(currentPass)) {
+            String newPassOne = listener.getString(EnterNewPass);
+            String newPassTwo = listener.getString(ConfirmNewPass);
 
-            if(newPassOne.equals(newPassTwo)){
+            if (newPassOne.equals(newPassTwo)) {
                 passCon.changePassword(newPassOne);
             } else {
-                printer.print(Messages.passwordsDontMatch);
+                printer.print(PasswordsDontMatch);
             }
 
         } else {
-            printer.print(Messages.incorrectLogin);
+            printer.print(IncorrectLogin);
         }
     }
 }

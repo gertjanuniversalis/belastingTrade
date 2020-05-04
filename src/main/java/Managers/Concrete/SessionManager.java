@@ -1,5 +1,6 @@
 package Managers.Concrete;
 
+import Data.Enums.ELanguage;
 import Data.Session;
 import Entities.Primary.User;
 
@@ -31,6 +32,18 @@ public class SessionManager {
     }
 
     public static int getUserId() {
-        return Session.activeUser.getId();
+        if (isLoggedIn()) {
+            return Session.activeUser.getId();
+        } else {
+            return -1;
+        }
+    }
+
+    public static ELanguage getUserLanguage() {
+        if(isLoggedIn()) {
+            return Session.activeUser.getLanguage();
+        } else {
+            return ELanguage.English;
+        }
     }
 }

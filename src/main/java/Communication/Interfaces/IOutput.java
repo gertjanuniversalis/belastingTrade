@@ -1,5 +1,7 @@
 package Communication.Interfaces;
 
+import Data.Enums.EMessage;
+
 public interface IOutput {
     void printGenericMenu();
     void printUserMenu();
@@ -7,6 +9,7 @@ public interface IOutput {
     void printProductMenu();
     void printPossibleDeliveries();
     void print(String statement);
+    void print(EMessage message);
     void welcome(String userName);
     void printNotImplemented();
 }

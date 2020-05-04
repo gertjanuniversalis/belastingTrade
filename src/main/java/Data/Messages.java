@@ -1,25 +1,56 @@
 package Data;
 
+import Data.Enums.ELanguage;
+import Data.Enums.EMessage;
+import Exceptions.MessageNotSuppliedException;
+import Managers.Concrete.SessionManager;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class Messages {
-    //Generic messages
-    public static String welcome = "Welcome to BDtrade.\nPlease take a moment to edit your account to start offering new products.";
 
-    //Account messages
-    public static String addressNeeded = "In order to use home pickup, first add your address to your account";
-    public static String noDeliverySet = "No avaible delivery types have been set";
-    public static String requestDeliveryTypes = "enter the desired delivery types as a continuous list";
+    ELanguage language = SessionManager.getUserLanguage();
 
-    //Product messages
+    public static String getMessage(EMessage message){
+        String dataFile = getFile();
 
-    //Security messages
-    public static String incorrectLogin = "Incorrect credentials, please try again";
-    public static String passwordsDontMatch = "The passwords don't match, please try again";
-    public static String enterNewPass = "Please enter your new password";
-    public static String confirmNewPass = "Please reenter your password to confirm";
+        return MessageReader.getMessage(dataFile, message.name());
+    }
 
-    //Password messages
-    public static String securityConfirm = "Please re-enter your password for security purposes";
+    private static String getFile(){
+        switch(SessionManager.getUserLanguage()){
+            default:
+            case English:
+                //English is the default language
+                return "Localisation/English.properties";
+        }
+    }
 
-    //Unsorted messages
+    private static class MessageReader {
+        public static String getMessage(String dataFile, String messageName) {
+            try(InputStream stream = MessageReader.class.getClassLoader().getResourceAsStream(dataFile)){
+                Properties properties = new Properties();
 
+                if(stream != null){
+                    properties.load(stream);
+                } else {
+                    throw new FileNotFoundException("Language file not found");
+                }
+
+                String messageText = properties.getProperty(messageName);
+
+                if(!messageText.isEmpty()) {
+                    return messageText;
+                } else {
+                    throw new MessageNotSuppliedException(dataFile, messageName);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return "";
+        }
+    }
 }

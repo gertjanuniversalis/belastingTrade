@@ -74,7 +74,7 @@ public class Output implements IOutput {
 
 
     private String menuOrdinal(int i) {
-        return "" + i + 1 + ")\t";
+        return i + 1 + ")\t";
     }
 
     private String dashToSpace(String s) {
