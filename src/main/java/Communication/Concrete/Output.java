@@ -2,13 +2,19 @@ package Communication.Concrete;
 
 import Communication.Interfaces.IOutput;
 import Data.Enums.EDeliveryType;
+import Data.Enums.EMessage;
 import Data.Enums.Menus.*;
+import Data.Messages;
 import Managers.Concrete.SessionManager;
+
+import static Data.Enums.EMessage.*;
+import static Data.Messages.getMessage;
+
 
 public class Output implements IOutput {
     @Override
     public void printGenericMenu() {
-        System.out.println("Welcome to BDPlace.\nChoose your action.");
+        System.out.println(getMessage(NoAccountWelcome));
         for (EGenericMenuCommand command : EGenericMenuCommand.values()) {
             System.out.println(menuOrdinal(command.ordinal()) + dashToSpace(command.name()));
         }
@@ -52,13 +58,18 @@ public class Output implements IOutput {
     }
 
     @Override
+    public void print(EMessage message) {
+        print(Messages.getMessage(message));
+    }
+
+    @Override
     public void welcome(String userName) {
-        System.out.println("Login successful.\nWelcome " + userName);
+        System.out.println(getMessage(LoginWelcome) + userName);
     }
 
     @Override
     public void printNotImplemented() {
-        System.out.println("This functionality is not yet implemented, return later");
+        System.out.println(getMessage(NotImplemented));
     }
 
 
