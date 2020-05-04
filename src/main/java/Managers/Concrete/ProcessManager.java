@@ -1,8 +1,9 @@
 package Managers.Concrete;
 
-import Controllers.PasswordController;
+import Controllers.Concrete.PasswordController;
 import Data.Enums.EGender;
 import Data.Enums.Menus.EPersonalMenuCommand;
+import Data.Messages;
 import Entities.DAO.UserDAO;
 import Entities.Primary.User;
 import Managers.Abstract.AbstractHandler;
@@ -20,7 +21,7 @@ public class ProcessManager extends AbstractHandler {
                 SessionManager.setUser(user);
                 printer.welcome(user.getName());
             } else {
-                printer.print("Incorrect credentials, please try again");
+                printer.print(Messages.incorrectLogin);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -41,32 +42,10 @@ public class ProcessManager extends AbstractHandler {
 
         if(userID > 0){
             new PasswordController().assignPassword(user);
+
+            printer.print(Messages.welcome);
         }
     }
 
-    public void requestAction() {
-        printer.printUserMenu();
-        int commandInt = listener.getInt();
-        handleInput(commandInt);
-    }
 
-    private void handleInput(int commandInt) {
-        try {
-            EPersonalMenuCommand command = EPersonalMenuCommand.fromOrdinal(commandInt - 1);
-
-            switch (command) {
-                case Products:
-                    new ProductManager().requestAction();
-                    return;
-                case Account:
-                    new AccountManager().requestAction();
-                    return;
-                case Logout:
-                    SessionManager.logout();
-                    return;
-            }
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-        }
-    }
 }

@@ -1,7 +1,9 @@
 package Entities.Primary;
 
+import Data.Enums.EDeliveryType;
 import Data.Enums.EGender;
 import Data.Enums.EAccountType;
+import Data.Enums.EDeliveryType;
 import Entities.Secondary.Address;
 import Entities.Secondary.MediaFile;
 import lombok.Getter;
@@ -34,6 +36,12 @@ public class User {
     @Getter @Setter
     @Enumerated(value = EnumType.STRING)
     protected EAccountType accountType;
+
+
+    @Getter @Setter
+    @ElementCollection
+    @Enumerated(value = EnumType.STRING)
+    protected List<EDeliveryType> deliveryTypes;
 
     @Getter @Setter
     @Embedded

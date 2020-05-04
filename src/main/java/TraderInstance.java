@@ -1,16 +1,11 @@
-import Communication.Input;
-import Communication.Output;
-import Data.Enums.Menus.EGenericMenuCommand;
-import Managers.Concrete.GeneralHandler;
-import Managers.Concrete.ProcessManager;
-import Managers.Concrete.SessionManager;
+import Controllers.Concrete.GeneralController;
 
 public class TraderInstance {
     private boolean run = true;
 
     public void run(){
         while(run) {
-            GeneralHandler handler = new GeneralHandler();
+            GeneralController handler = new GeneralController();
             handler.requestAction();
         }
     }

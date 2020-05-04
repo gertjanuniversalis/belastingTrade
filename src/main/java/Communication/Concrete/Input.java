@@ -1,10 +1,11 @@
-package Communication;
+package Communication.Concrete;
 
+import Communication.Interfaces.IInput;
 import Util.InputValidator;
 
 import java.util.Scanner;
 
-public class Input {
+public class Input implements IInput {
     private InputValidator validator = new InputValidator();
     private Output printer = new Output();
 

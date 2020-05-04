@@ -29,4 +29,8 @@ public class SessionManager {
     public static User getUser() {
         return Session.activeUser;
     }
+
+    public static int getUserId() {
+        return Session.activeUser.getId();
+    }
 }

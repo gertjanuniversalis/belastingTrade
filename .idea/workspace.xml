@@ -2,20 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99eb9585-b889-49f6-b0c9-08cbf45011a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Communication/EmailManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9c2297d-dcff-4d47-a81a-ed21afe1bb38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f9c2297d-dcff-4d47-a81a-ed21afe1bb38.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Communication/Interfaces/IInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Communication/Interfaces/IOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Abstract/BasicController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/AccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/GeneralController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/ProcessController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Data/Messages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Util/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Communication/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Communication/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/PasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/PasswordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Enums/EGender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/EGender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BelastingTrade.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BelastingTrade.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Communication/EmailManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Communication/Concrete/EmailManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Communication/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Communication/Concrete/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Communication/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Communication/Concrete/Output.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/PasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/PasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Enums/EDeliveryTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/EDeliveryType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Enums/Menus/EAccountCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/Menus/EAccountCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entities/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/DAO/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Primary/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Primary/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Secondary/PasswordContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Secondary/PasswordContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Abstract/AbstractHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Abstract/AbstractHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Concrete/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/AccountManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Concrete/GeneralHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/GeneralHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Concrete/GeneralHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/GeneralManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProcessManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProcessManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Concrete/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/SessionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TraderInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TraderInstance.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +60,6 @@
         <item name="bdplace@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bdplace@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="belastingtrade: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
     </expand>
     <select />
   </component>
@@ -60,6 +68,7 @@
       <list>
         <option value="cdi.beans_1_1" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -94,6 +103,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="Communication.Concrete" />
+      <recent name="Communication.Interfaces" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Gebruiker\IdeaProjects\BelastingTrade\src\main\resources" />
     </key>
@@ -148,7 +161,8 @@
       <option name="presentableId" value="Default" />
       <updated>1588313867551</updated>
       <workItem from="1588313888498" duration="14220000" />
-      <workItem from="1588411926631" duration="10524000" />
+      <workItem from="1588411926631" duration="11533000" />
+      <workItem from="1588572658889" duration="10565000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1588342776820</created>
@@ -185,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588420758098</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed a bug associated with nextInt()">
+      <created>1588424427014</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588424427014</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,25 +218,30 @@
     <MESSAGE value="Created an abstracthandler, and moved the primary run from Main to a generalHandler" />
     <MESSAGE value="Added persistence.xml and fixed a bug in the action selector" />
     <MESSAGE value="changed command inputs to use nextInt instead of nextLine" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed command inputs to use nextInt instead of nextLine" />
+    <MESSAGE value="Fixed a bug associated with nextInt()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a bug associated with nextInt()" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588317706394">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588317706394" />
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1588411488212">
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1588580350561">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588411488212" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588580350561" />
+    <state x="690" y="295" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1588500817057">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="295" key="#com.intellij.ide.util.PackageChooserDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588500817057" />
     <state x="193" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588421737429">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="193" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588421737429" />
-    <state x="568" y="114" key="CommitChangelistDialog2" timestamp="1588420757002">
+    <state x="568" y="114" key="CommitChangelistDialog2" timestamp="1588424426026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="568" y="114" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588420757002" />
+    <state x="568" y="114" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588424426026" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1588424008001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -240,10 +266,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588413897923" />
+    <state x="775" y="297" key="chooseDestDirectoryDialog" timestamp="1588500919167">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="775" y="297" key="chooseDestDirectoryDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588500919167" />
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1588317944703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588317944703" />
+    <state x="1930" y="108" width="1279" height="949" key="dock-window-1" timestamp="1588589514803">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1930" y="108" width="1279" height="949" key="dock-window-1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588589514803" />
     <state x="690" y="275" key="extract.method.dialog" timestamp="1588335088866">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -258,7 +292,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/App.java</url>
-          <line>8</line>
+          <line>2</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

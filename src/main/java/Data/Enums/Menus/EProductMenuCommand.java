@@ -8,4 +8,5 @@ public enum EProductMenuCommand {
 
     private static EProductMenuCommand[] commands = values();
     public static EProductMenuCommand fromOrdinal(int n){return commands[n];}
+    public static EProductMenuCommand fromCommand(int n) {return fromOrdinal(n-1);}
 }

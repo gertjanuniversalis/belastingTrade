@@ -1,23 +1,26 @@
-package Managers.Concrete;
+package Controllers.Concrete;
 
+import Controllers.Abstract.BasicController;
 import Data.Enums.Menus.EGenericMenuCommand;
-import Managers.Abstract.AbstractHandler;
+import Managers.Concrete.GeneralManager;
+import Managers.Concrete.ProcessManager;
+import Managers.Concrete.SessionManager;
 
-public class GeneralHandler extends AbstractHandler {
-
+public class GeneralController extends BasicController {
+    private GeneralManager manager = new GeneralManager();
     public void requestAction() {
         if (!SessionManager.isLoggedIn()) {
-            printer.printGenericmenu();
+            printer.printGenericMenu();
             int commandInt = listener.getInt();
             handleInput(commandInt);
         } else {
-            new ProcessManager().requestAction();
+            new ProcessController().requestAction();
         }
     }
 
     private void handleInput(int commandInt) {
         try {
-            EGenericMenuCommand command = EGenericMenuCommand.fromOrdinal(commandInt - 1);
+            EGenericMenuCommand command = EGenericMenuCommand.fromCommand(commandInt);
 
             switch (command) {
                 case Login:

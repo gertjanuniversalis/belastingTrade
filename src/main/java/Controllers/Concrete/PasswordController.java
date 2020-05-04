@@ -1,19 +1,25 @@
-package Controllers;
+package Controllers.Concrete;
 
-import Communication.EmailManager;
+import Communication.Concrete.EmailManager;
 import Entities.DAO.DAOBase;
 import Entities.Primary.User;
 import Entities.Secondary.PasswordContainer;
+import Managers.Concrete.SessionManager;
 
 import java.util.Objects;
 
 public class PasswordController extends DAOBase {
+//todo: create and fill PasswordManager
+
+    public boolean isPasswordCorrect(String currentPass) {
+        return isPasswordCorrect(SessionManager.getUser(), currentPass);
+    }
 
     public boolean isPasswordCorrect(User user, String password) {
         try {
             PasswordContainer passContainer = manager().find(PasswordContainer.class, user.getId());
 
-            if(passContainer != null && passContainer.getPassword().equals(password)){
+            if (passContainer != null && passContainer.getPassword().equals(password)) {
                 return true;
             }
         } catch (Exception e) {
@@ -32,14 +38,25 @@ public class PasswordController extends DAOBase {
             manager().getTransaction().commit();
 
             new EmailManager().emailPassword(user, container.getPassword());
-        } catch (Exception e){
+        } catch (Exception e) {
             e.getMessage();
             manager().getTransaction().rollback();
         }
     }
 
-    private String generatePassword(User user){
+    private String generatePassword(User user) {
         int userHash = Objects.hash(user, user.getId());
-        return ""+userHash;
+        return "" + userHash;
+    }
+
+    public void changePassword(String newPassword) {
+        try {
+            PasswordContainer container = manager().find(PasswordContainer.class, SessionManager.getUserId());
+            container.setPassword(newPassword);
+            manager().getTransaction().commit();
+        } catch (Exception e) {
+            e.getMessage();
+            manager().getTransaction().rollback();
+        }
     }
 }

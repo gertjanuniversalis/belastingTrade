@@ -41,4 +41,18 @@ public class UserDAO extends DAOBase {
             return -1;
         }
     }
+
+    public void updateUser(User updatedUser) {
+        try{
+            User dbState = manager().find(User.class, updatedUser.getId());
+
+            manager().getTransaction().begin();
+            manager().persist(dbState);
+            manager().merge(updatedUser);
+            manager().getTransaction().commit();
+        } catch (Exception e){
+            e.getMessage();
+            manager().getTransaction().rollback();
+        }
+    }
 }

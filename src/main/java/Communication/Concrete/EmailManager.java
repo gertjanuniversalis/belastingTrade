@@ -1,4 +1,4 @@
-package Communication;
+package Communication.Concrete;
 
 import Entities.Primary.User;
 
