@@ -9,7 +9,26 @@ import java.util.List;
 
 public class ProductDAO extends DAOBase {
     public List<Product> getOwnedProducts() {
-        manager().persist(SessionManager.getUser());
-        return SessionManager.getUser().getPlacedProducts();
+           Query query = manager().createQuery("SELECT p FROM Product p WHERE p.placedBy = :user");
+           query.setParameter("user",SessionManager.getUser());
+
+           List<Product> userProducts = query.getResultList();
+
+           return userProducts;
+    }
+
+    public int insertProduct(Product product) {
+        product.setPlacedBy(SessionManager.getUser());
+        try{
+            manager().getTransaction().begin();
+            manager().persist(product);
+            manager().getTransaction().commit();
+
+            return product.getId();
+        } catch (Exception e) {
+            e.getMessage();
+            manager().getTransaction().rollback();
+            return -1;
+        }
     }
 }

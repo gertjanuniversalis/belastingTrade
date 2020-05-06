@@ -53,6 +53,9 @@ public class PasswordController extends DAOBase {
         try {
             PasswordContainer container = manager().find(PasswordContainer.class, SessionManager.getUserId());
             container.setPassword(newPassword);
+
+            manager().getTransaction().begin();
+            manager().persist(container);
             manager().getTransaction().commit();
         } catch (Exception e) {
             e.getMessage();

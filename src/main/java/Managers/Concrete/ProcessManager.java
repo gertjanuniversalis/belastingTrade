@@ -43,6 +43,4 @@ public class ProcessManager extends AbstractHandler {
             printer.print(SignupSuccess);
         }
     }
-
-
 }

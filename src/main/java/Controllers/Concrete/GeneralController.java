@@ -6,6 +6,8 @@ import Managers.Concrete.GeneralManager;
 import Managers.Concrete.ProcessManager;
 import Managers.Concrete.SessionManager;
 
+import static Data.Enums.EMessage.UnknownCommand;
+
 public class GeneralController extends BasicController {
     private GeneralManager manager = new GeneralManager();
     public void requestAction() {
@@ -28,8 +30,11 @@ public class GeneralController extends BasicController {
                     return;
                 case Signup:
                     new ProcessManager().signUp();
+                    return;
                 case Quit:
+                    System.exit(0);
                 default:
+                    printer.print(UnknownCommand);
             }
         } catch (NumberFormatException e) {
             e.printStackTrace();

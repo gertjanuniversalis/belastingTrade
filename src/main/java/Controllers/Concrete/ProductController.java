@@ -1,8 +1,11 @@
 package Controllers.Concrete;
 
 import Controllers.Abstract.BasicController;
+import Data.Enums.EMessage;
 import Data.Enums.Menus.EProductMenuCommand;
 import Managers.Concrete.ProductManager;
+
+import static Data.Enums.EMessage.UnknownCommand;
 
 public class ProductController extends BasicController {
     private ProductManager manager = new ProductManager();
@@ -21,7 +24,7 @@ public class ProductController extends BasicController {
                     manager.placeNewProduct();
                     return;
                 case Edit_product:
-                    //todo: implement
+                    //todo: implement product edit
                     printer.printNotImplemented();
                     return;
                 case List_offered_products:
@@ -29,6 +32,8 @@ public class ProductController extends BasicController {
                     return;
                 case Back:
                     return;
+                default:
+                    printer.print(UnknownCommand);
             }
         } catch (NumberFormatException e) {
             e.printStackTrace();

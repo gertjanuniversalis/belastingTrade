@@ -42,7 +42,7 @@ public class Messages {
 
                 String messageText = properties.getProperty(messageName);
 
-                if(!messageText.isEmpty()) {
+                if(messageText != null && !messageText.isEmpty()) {
                     return messageText;
                 } else {
                     throw new MessageNotSuppliedException(dataFile, messageName);

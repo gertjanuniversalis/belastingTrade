@@ -1,5 +1,7 @@
 package Entities.Primary;
 
+import Data.Enums.EDeliveryType;
+import Data.Enums.EProductCategory;
 import Entities.Secondary.MediaFile;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,6 +13,8 @@ import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.PositiveOrZero;
 import java.util.Date;
 import java.util.Set;
+
+import static javax.persistence.EnumType.STRING;
 
 @Entity
 public class Product {
@@ -36,6 +40,14 @@ public class Product {
     @Getter
     @Setter
     private boolean inStore;
+    @Getter
+    @Setter
+    @Enumerated(value = STRING)
+    private EProductCategory category;
+    @Getter
+    @Setter
+    @Enumerated(value = STRING)
+    private EDeliveryType deliveryType;
 
     @Getter
     @Setter
@@ -56,13 +68,22 @@ public class Product {
     public Product() {
     }
 
+    public Product(String productName, String description, double price, EProductCategory cat, EDeliveryType deliveryType) {
+        this.name = productName;
+        this.description = description;
+        this.price = price;
+        this.category = cat;
+        this.deliveryType = deliveryType;
+    }
+
     @Override
     public String toString() {
         return "name='" + name + "\n" +
-                        ", price=" + price + "\n" +
-                        ", description='" + description + "\n" +
-                        ", datePlaced=" + datePlaced + "\n" +
-                        ", inStore=" + inStore + "\n" +
-                        ", soldTo=" + soldTo + "\n";
+                "Category=" + category.name() +
+                "price=" + price + "\n" +
+                "description='" + description + "\n" +
+                "datePlaced=" + datePlaced + "\n" +
+                "in tore=" + inStore + "\n" +
+                "soldTo=" + soldTo + "\n";
     }
 }

@@ -8,6 +8,7 @@ public interface IOutput {
     void printAccountMenu();
     void printProductMenu();
     void printPossibleDeliveries();
+    void printUserCats();
     void print(String statement);
     void print(EMessage message);
     void welcome(String userName);

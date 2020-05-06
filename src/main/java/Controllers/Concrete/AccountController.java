@@ -1,9 +1,12 @@
 package Controllers.Concrete;
 
 import Controllers.Abstract.BasicController;
+import Data.Enums.EMessage;
 import Data.Enums.Menus.EAccountCommand;
 import Managers.Concrete.AccountManager;
 import Managers.Concrete.SessionManager;
+
+import static Data.Enums.EMessage.UnknownCommand;
 
 public class AccountController extends BasicController {
     private AccountManager manager = new AccountManager();
@@ -24,8 +27,10 @@ public class AccountController extends BasicController {
                     manager.changePass();
                     break;
                 case Change_name:
+                    //todo: implement name change
                     break;
                 case Change_address:
+                    //todo: implement address change
                     break;
                 case Change_delivery_mode:
                     manager.displayCurrentDeliveryModes();
@@ -39,6 +44,8 @@ public class AccountController extends BasicController {
                 case Logout:
                     SessionManager.logout();
                     break;
+                default:
+                    printer.print(UnknownCommand);
             }
         } catch (NumberFormatException e) {
             e.printStackTrace();

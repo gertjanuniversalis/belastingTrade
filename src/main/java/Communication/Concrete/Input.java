@@ -13,11 +13,14 @@ public class Input implements IInput {
 
     private static Scanner scanner = new Scanner(System.in);
 
+    @Override
     public String getString(){
         String input = scanner.nextLine();
         String cleanInput = validator.cleanInput(input);
         return cleanInput;
     }
+
+    @Override
     public String getString(String question){
         printer.print(question);
         return getString();
@@ -28,12 +31,14 @@ public class Input implements IInput {
         return getString(Messages.getMessage(message));
     }
 
+    @Override
     public int getInt(){
         int inputInt = scanner.nextInt();
         scanner.nextLine(); //This is needed to accept a next string input normally
         return inputInt;
     }
 
+    @Override
     public int getInt(String question){
         printer.print(question);
         return getInt();

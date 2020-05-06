@@ -1,8 +1,8 @@
 package Data.Enums.Menus;
 
 public enum EPersonalMenuCommand {
-    Products,
-    Account,
+    My_products,
+    My_account,
     Logout;
 
     private static EPersonalMenuCommand[] commands = values();

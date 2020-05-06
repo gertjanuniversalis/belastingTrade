@@ -1,12 +1,15 @@
 package Data.Enums;
 
-public enum EItemCat {
+public enum EProductCategory {
     Undecided,
     Computer,
     Mobile,
-    Art;
+    Art,
+    It_Support,
+    Tutorial,
+    Transport;;
 
-    private static EItemCat[] categories = values();
-    public static EItemCat fromOrdinal(int n){return categories[n];}
-    public static EItemCat fromCommand(int n) { return fromOrdinal(n-1);  }
+    private static EProductCategory[] categories = values();
+    public static EProductCategory fromOrdinal(int n){return categories[n];}
+    public static EProductCategory fromCommand(int n) { return fromOrdinal(n-1);  }
 }

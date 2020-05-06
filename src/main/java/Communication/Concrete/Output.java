@@ -3,6 +3,7 @@ package Communication.Concrete;
 import Communication.Interfaces.IOutput;
 import Data.Enums.EDeliveryType;
 import Data.Enums.EMessage;
+import Data.Enums.EProductCategory;
 import Data.Enums.Menus.*;
 import Data.Messages;
 import Managers.Concrete.SessionManager;
@@ -49,6 +50,14 @@ public class Output implements IOutput {
         System.out.println("~~~~~~~Delivery methods~~~~~~~~");
         for (EDeliveryType command : EDeliveryType.values()) {
             System.out.println(menuOrdinal(command.ordinal()) + dashToSpace(command.name()));
+        }
+    }
+
+    @Override
+    public void printUserCats() {
+        System.out.println(getMessage(RequestCats));
+        for (EProductCategory cat : EProductCategory.values()){
+            System.out.println(menuOrdinal(cat.ordinal())+dashToSpace(cat.name()));
         }
     }
 
