@@ -24,5 +24,5 @@ public enum EMessage {
     ProductDescription,
     ProvidePrice,
     RequestCats,
-    UnknownCommand
+    InputSearchType, ProvidePriceRange, InsertProductID, DealWithProduct, UnknownCommand
 }

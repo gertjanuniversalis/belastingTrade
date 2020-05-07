@@ -4,6 +4,7 @@ import Communication.Interfaces.IOutput;
 import Data.Enums.EDeliveryType;
 import Data.Enums.EMessage;
 import Data.Enums.EProductCategory;
+import Data.Enums.EProductSearchType;
 import Data.Enums.Menus.*;
 import Data.Messages;
 import Managers.Concrete.SessionManager;
@@ -54,10 +55,25 @@ public class Output implements IOutput {
     }
 
     @Override
+    public void printProductSearch() {
+        for (EProductSearchType st : EProductSearchType.values()) {
+            System.out.println(menuOrdinal(st.ordinal()) + dashToSpace(st.name()));
+        }
+    }
+
+    @Override
+    public void printStoreMenu() {
+        System.out.println("~~~~~~~~Store~~~~~~~~~~");
+        for (EStoreCommand command : EStoreCommand.values()) {
+            System.out.println(menuOrdinal(command.ordinal()) + dashToSpace(command.name()));
+        }
+    }
+
+    @Override
     public void printUserCats() {
         System.out.println(getMessage(RequestCats));
-        for (EProductCategory cat : EProductCategory.values()){
-            System.out.println(menuOrdinal(cat.ordinal())+dashToSpace(cat.name()));
+        for (EProductCategory cat : EProductCategory.values()) {
+            System.out.println(menuOrdinal(cat.ordinal()) + dashToSpace(cat.name()));
         }
     }
 

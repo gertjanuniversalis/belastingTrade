@@ -40,7 +40,6 @@ public class User {
     @Enumerated(value = STRING)
     protected ELanguage language = ELanguage.English;
 
-
     @Getter @Setter
     @ElementCollection
     @Enumerated(value = STRING)

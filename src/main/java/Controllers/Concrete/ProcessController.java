@@ -28,6 +28,9 @@ public class ProcessController extends BasicController {
                 case My_account:
                     new AccountController().requestAction();
                     return;
+                case Marketplace:
+                    new MarketController().requestAction();
+                    return;
                 case Logout:
                     SessionManager.logout();
                     return;

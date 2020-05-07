@@ -23,6 +23,8 @@ public class Messages {
     private static String getFile(){
         switch(SessionManager.getUserLanguage()){
             default:
+            case Nederlands:
+                return "Localisation/Nederlands.properties";
             case English:
                 //English is the default language
                 return "Localisation/English.properties";

@@ -3,7 +3,7 @@ package Data.Enums.Menus;
 public enum EProductMenuCommand {
     Place_product,
     Edit_product,
-    List_offered_products,
+    Show_my_products,
     Back;
 
     private static EProductMenuCommand[] commands = values();

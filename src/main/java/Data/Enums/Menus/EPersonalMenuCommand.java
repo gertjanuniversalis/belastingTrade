@@ -1,6 +1,7 @@
 package Data.Enums.Menus;
 
 public enum EPersonalMenuCommand {
+    Marketplace,
     My_products,
     My_account,
     Logout;

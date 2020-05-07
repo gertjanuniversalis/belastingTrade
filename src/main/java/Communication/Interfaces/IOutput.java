@@ -8,9 +8,13 @@ public interface IOutput {
     void printAccountMenu();
     void printProductMenu();
     void printPossibleDeliveries();
+    void printStoreMenu();
     void printUserCats();
     void print(String statement);
     void print(EMessage message);
     void welcome(String userName);
+
     void printNotImplemented();
+
+    void printProductSearch();
 }

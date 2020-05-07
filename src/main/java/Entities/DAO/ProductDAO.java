@@ -2,6 +2,7 @@ package Entities.DAO;
 
 import Data.Session;
 import Entities.Primary.Product;
+import Exceptions.ProductNotFoundException;
 import Managers.Concrete.SessionManager;
 
 import javax.persistence.Query;
@@ -29,6 +30,35 @@ public class ProductDAO extends DAOBase {
             e.getMessage();
             manager().getTransaction().rollback();
             return -1;
+        }
+    }
+
+    public List<Product> findByPrice(double lowerBound, double upperBound) {
+        Query query;
+
+        if (lowerBound == 0){
+            query = manager().createQuery("SELECT p FROM Product p WHERE p.price > :upper");
+            query.setParameter("upper", upperBound);
+        } else if (upperBound == 0){
+            query = manager().createQuery("SELECT p FROM Product p WHERE p.price < :lower");
+            query.setParameter("lower",lowerBound);
+        } else {
+            query = manager().createQuery("SELECT p FROM Product p WHERE p.price BETWEEN :lower AND :upper");
+            query.setParameter("lower",lowerBound);
+            query.setParameter("upper",upperBound);
+        }
+
+        List<Product> productsOfPrice = query.getResultList();
+        return productsOfPrice;
+    }
+
+    public Product getProductById(int prodID) {
+        Product product = manager().find(Product.class, prodID);
+
+        if(product != null){
+            return product;
+        } else {
+            throw new ProductNotFoundException("The product with id "+prodID+" can't be found");
         }
     }
 }

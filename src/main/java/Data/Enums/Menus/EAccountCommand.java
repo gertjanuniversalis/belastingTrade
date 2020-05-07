@@ -1,10 +1,10 @@
 package Data.Enums.Menus;
 
 public enum EAccountCommand {
-    Change_password,
-    Change_name,
-    Change_address,
     Change_delivery_mode,
+    Change_address,
+    Change_name,
+    Change_password,
     View_delivery_modes,
     Back,
     Logout;

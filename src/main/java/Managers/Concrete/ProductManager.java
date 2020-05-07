@@ -25,23 +25,29 @@ public class ProductManager extends AbstractHandler {
             return;
         }
 
-        EProductCategory cat;
-        try {
-            printer.printUserCats();
-            String catString = listener.getString();
-            int catInt = Integer.parseInt(catString);
-            cat = EProductCategory.fromCommand(catInt);
-        } catch (NumberFormatException e) {
-            //todo: handle error
-            e.printStackTrace();
-            return;
-        }
+        EProductCategory cat = requestCategory();
 
         EDeliveryType deliveryType = getDeliveryType();
 
         Product product = new Product(productName, description, price, cat, deliveryType);
 
         new ProductDAO().insertProduct(product);
+    }
+
+    private EProductCategory requestCategory() {
+        try {
+            printer.printUserCats();
+            String catString = listener.getString();
+            int catInt = Integer.parseInt(catString);
+            EProductCategory cat = EProductCategory.fromCommand(catInt);
+
+            return cat;
+        } catch (NumberFormatException e) {
+            //todo: handle error
+            e.printStackTrace();
+            //todo: implement retry until correct
+            return EProductCategory.Undecided;
+        }
     }
 
     public void printOwnedProducts() {
@@ -54,7 +60,23 @@ public class ProductManager extends AbstractHandler {
     }
 
     private EDeliveryType getDeliveryType() {
+        List<EDeliveryType> availableTypes = SessionManager.getUserDeliveryTypes();
+
+        if (availableTypes.size() == 0) {
+            return EDeliveryType.Unset;
+        }
+
+        for (int i = 0; i < availableTypes.size(); i++) {
+            printer.print(i - 1 + ")\t" + availableTypes.get(i).name());
+        }
+
+        int chosenDelType = listener.getInt();
+
+        EDeliveryType chosenType = EDeliveryType.fromOrdinal(chosenDelType - 1);
+
+        return chosenType;
+
         //todo: implement get delivery type
-        return EDeliveryType.Pickup_from_store;
+//        return EDeliveryType.Pickup_from_store;
     }
 }
