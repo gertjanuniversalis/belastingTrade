@@ -1,10 +1,7 @@
 package Communication.Concrete;
 
 import Communication.Interfaces.IOutput;
-import Data.Enums.EDeliveryType;
-import Data.Enums.EMessage;
-import Data.Enums.EProductCategory;
-import Data.Enums.EProductSearchType;
+import Data.Enums.*;
 import Data.Enums.Menus.*;
 import Data.Messages;
 import Managers.Concrete.SessionManager;
@@ -58,6 +55,14 @@ public class Output implements IOutput {
     public void printProductSearch() {
         for (EProductSearchType st : EProductSearchType.values()) {
             System.out.println(menuOrdinal(st.ordinal()) + dashToSpace(st.name()));
+        }
+    }
+
+    @Override
+    public void printLanguageOptions() {
+        System.out.println(getMessage(SupplyLanguage));
+        for (ELanguage lang : ELanguage.values()) {
+            System.out.println(menuOrdinal(lang.ordinal()) + dashToSpace(lang.name()));
         }
     }
 

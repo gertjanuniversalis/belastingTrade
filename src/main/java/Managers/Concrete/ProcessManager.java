@@ -2,6 +2,7 @@ package Managers.Concrete;
 
 import Controllers.Concrete.PasswordController;
 import Data.Enums.EGender;
+import Data.Enums.ELanguage;
 import Entities.DAO.UserDAO;
 import Entities.Primary.User;
 import Managers.Abstract.AbstractHandler;
@@ -32,8 +33,10 @@ public class ProcessManager extends AbstractHandler {
         String name = listener.getString(SupplyDisplayName);
         String email = listener.getString(SupplyMail);
         int gender = listener.getInt(SupplyGender);
+        printer.printLanguageOptions();
+        int language = listener.getInt();
 
-        User user = new User(email, name, EGender.fromOrdinal(gender));
+        User user = new User(email, name, EGender.fromOrdinal(gender), ELanguage.fromCommand(language));
 
         int userID = new UserDAO().insertUser(user);
 

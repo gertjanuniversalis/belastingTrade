@@ -60,11 +60,10 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.MERGE)
     Set<MediaFile> media;
 
-    public User(){}
-
-    public User(String email, String name, EGender gender){
+    public User(String email, String name, EGender gender, ELanguage language){
         this.email = email;
         this.name = name;
         this.gender = gender;
+        this.language = language;
     }
 }

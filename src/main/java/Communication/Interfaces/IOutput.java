@@ -17,4 +17,6 @@ public interface IOutput {
     void printNotImplemented();
 
     void printProductSearch();
+
+    void printLanguageOptions();
 }
