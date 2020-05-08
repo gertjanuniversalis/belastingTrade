@@ -70,7 +70,7 @@ public class Product {
     @Override
     public String toString() {
         return "product id=" + id + "\n" +
-                "name='" + name + "\n" +
+                "name=" + name + "\n" +
                 "Category=" + category.name() +
                 "price=" + price + "\n" +
                 "description='" + description + "\n" +

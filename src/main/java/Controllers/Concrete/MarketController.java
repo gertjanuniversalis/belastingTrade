@@ -1,12 +1,13 @@
 package Controllers.Concrete;
 
 import Controllers.Abstract.BasicController;
-import Data.Enums.EMessage;
 import Data.Enums.Menus.EStoreCommand;
 import Entities.DAO.ProductDAO;
 import Entities.Primary.Product;
 import Managers.Concrete.CartManager;
 import Managers.Concrete.SessionManager;
+
+import java.util.List;
 
 import static Data.Enums.EMessage.*;
 
@@ -28,9 +29,15 @@ public class MarketController extends BasicController {
                 case Search_products:
                     new SearchController().searchProducts();
                     return;
+                case Buy_product:
+                    directBuyFromId();
+                    break;
                 case Display_cart_contents:
-                    PrintCart();
+                    printCart();
                     return;
+                case Buy_all_selected:
+                    buyAll();
+                    break;
                 default:
                     printer.print(UnknownCommand);
             }
@@ -39,8 +46,22 @@ public class MarketController extends BasicController {
         }
     }
 
-    private void PrintCart() {
-        String cartContents = SessionManager.getCartContents();
+    private void directBuyFromId() {
+        int prodId = listener.getInt(InsertProductID);
+        Product boughtProd = new ProductDAO().getProductById(prodId);
+        SessionManager.addProductToCart(boughtProd);
+    }
+
+    private void buyAll() {
+        List<Product> productsInCart = SessionManager.getCartContents();
+        for (Product product:productsInCart){
+            product.setSoldTo(SessionManager.getUser());
+        }
+        new ProductDAO().massUpdate(productsInCart);
+    }
+
+    private void printCart() {
+        String cartContents = SessionManager.getCartString();
         printer.print(cartContents);
     }
 

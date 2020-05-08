@@ -4,7 +4,7 @@ public enum EStoreCommand {
     Buy_product,
     Display_cart_contents,
     Search_products,
-    Select_Product;
+    Select_Product, Buy_all_selected;
 
     private static EStoreCommand[] commands = values();
     public static EStoreCommand fromOrdinal(int n){return commands[n];}

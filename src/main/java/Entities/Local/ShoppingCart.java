@@ -1,6 +1,10 @@
 package Entities.Local;
 
+import Data.Enums.EMessage;
+import Data.Messages;
 import Entities.Primary.Product;
+import lombok.Getter;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,33 +12,27 @@ import java.util.List;
 import java.util.Map;
 
 public class ShoppingCart {
-    private Map<Product, Integer> mappedProducts;
+    @Getter
+    private List<Product> productsInCart;
 
-    public ShoppingCart(){
-        mappedProducts = new HashMap<>();
+
+    public ShoppingCart() {
+        productsInCart = new ArrayList<>();
     }
 
-    public void add(Product product){
-        if(mappedProducts.containsKey(product)){
-            int oldAmount = mappedProducts.get(product);
-
-            mappedProducts.replace(product, ++oldAmount);
-        } else {
-            mappedProducts.put(product, 1);
+    public void add(Product product) {
+        if (!productsInCart.contains(product)) {
+            productsInCart.add(product);
         }
     }
 
 
-
     @Override
-    public String toString(){
-        StringBuilder builder = new StringBuilder();
+    public String toString() {
+        StringBuilder builder = new StringBuilder(Messages.getMessage(EMessage.CartContains));
 
-        for (Map.Entry<Product, Integer> entry : mappedProducts.entrySet()){
-            builder.append(String.format("%s times %s\n",
-                    entry.getValue(),
-                    entry.getKey().getName()
-            ));
+        for (Product product : productsInCart) {
+            builder.append("- " + product.getName() + "\n");
         }
 
         return builder.toString();

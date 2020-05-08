@@ -25,6 +25,7 @@ public class SessionManager {
 
     public static void logout() {
         Session.activeUser = null;
+        Session.shoppingCart = null;
     }
 
     public static void setUser(User user) {
@@ -57,12 +58,18 @@ public class SessionManager {
 
 //Cart
     public static void addProductToCart(Product product){
-        if(Session.shoppingCart == null){Session.shoppingCart = new ShoppingCart();}
+        if(Session.shoppingCart == null){
+            Session.shoppingCart = new ShoppingCart();
+        }
 
         Session.shoppingCart.add(product);
     }
 
-    public static String getCartContents() {
+    public static String getCartString() {
         return Session.shoppingCart.toString();
+    }
+
+    public static List<Product> getCartContents() {
+        return Session.shoppingCart.getProductsInCart();
     }
 }

@@ -2,32 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99eb9585-b889-49f6-b0c9-08cbf45011a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/MarketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/SearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/EProductSearchType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/Menus/EStoreCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/Local/ShoppingCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exceptions/ProductNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/CartManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/SearchManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Communication/Concrete/Output.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Communication/Concrete/Output.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Communication/Interfaces/IOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Communication/Interfaces/IOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/ProcessController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/ProcessController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Enums/EDeliveryType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/EDeliveryType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Enums/ELanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/ELanguage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/MarketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Concrete/MarketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Data/Enums/EMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/EMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Enums/Menus/EAccountCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/Menus/EAccountCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Enums/Menus/EPersonalMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/Menus/EPersonalMenuCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Enums/Menus/EProductMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/Menus/EProductMenuCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Messages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/Enums/Menus/EStoreCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data/Enums/Menus/EStoreCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entities/DAO/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/DAO/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Local/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Local/ShoppingCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Primary/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Primary/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Primary/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Primary/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Secondary/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Secondary/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/ProductManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Managers/Concrete/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Managers/Concrete/SessionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Localisation/English.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Localisation/English.properties" afterDir="false" />
     </list>
@@ -171,7 +152,8 @@
       <updated>1588313867551</updated>
       <workItem from="1588313888498" duration="14220000" />
       <workItem from="1588411926631" duration="11533000" />
-      <workItem from="1588572658889" duration="53332000" />
+      <workItem from="1588572658889" duration="54482000" />
+      <workItem from="1588921057978" duration="7822000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1588342776820</created>
@@ -250,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588757243542</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Created a store menu, including a rudimentary shoppingcart">
+      <created>1588852292875</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1588852292875</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +256,8 @@
     <MESSAGE value="Created localisation code" />
     <MESSAGE value="Cleaned up locatisation calls" />
     <MESSAGE value="Fixed a problem with &quot;ListMyProducts&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a problem with &quot;ListMyProducts&quot;" />
+    <MESSAGE value="Created a store menu, including a rudimentary shoppingcart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a store menu, including a rudimentary shoppingcart" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588599057277">
@@ -286,26 +276,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="193" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588421737429" />
-    <state x="206" y="32" width="1622" height="990" key="CommitChangelistDialog2" timestamp="1588757242136">
+    <state x="206" y="32" width="1622" height="990" key="CommitChangelistDialog2" timestamp="1588852290840">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="206" y="32" width="1622" height="990" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588757242136" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1588772229639">
+    <state x="206" y="32" width="1622" height="990" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588852290840" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1588932931156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588772229639" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1588772229638">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588932931156" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1588932931156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588772229638" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1588772229638">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588932931156" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1588932931156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588772229638" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1588772229639">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588932931156" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1588932931156">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588772229639" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588932931156" />
     <state x="540" y="255" key="IDE.errors.dialog" timestamp="1588335376855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -326,18 +316,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="818" y="266" key="com.intellij.database.view.ui.DbObjectDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588317944703" />
-    <state x="1952" y="33" width="1279" height="949" key="dock-window-1" timestamp="1588590842085">
+    <state x="1947" y="148" width="1276" height="651" key="dock-window-1" timestamp="1588932934795">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1952" y="33" width="1279" height="949" key="dock-window-1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588590842085" />
+    <state x="1947" y="148" width="1276" height="651" key="dock-window-1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588932934795" />
     <state x="155" y="35" width="1608" height="1027" key="dock-window-2" timestamp="1588600223096">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="155" y="35" width="1608" height="1027" key="dock-window-2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588600223096" />
-    <state x="2050" y="43" width="1608" height="1027" key="dock-window-3" timestamp="1588842647055">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="-38" y="77" width="1608" height="1027" key="dock-window-3" timestamp="1588932127685">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="2050" y="43" width="1608" height="1027" key="dock-window-3/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588842647054" />
+    <state x="-38" y="77" width="1608" height="1027" key="dock-window-3/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588932127685" />
     <state x="1953" y="0" width="1279" height="651" key="dock-window-4" timestamp="1588753251777">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
