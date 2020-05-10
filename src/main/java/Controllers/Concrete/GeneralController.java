@@ -2,14 +2,12 @@ package Controllers.Concrete;
 
 import Controllers.Abstract.BasicController;
 import Data.Enums.Menus.EGenericMenuCommand;
-import Managers.Concrete.GeneralManager;
 import Managers.Concrete.ProcessManager;
 import Managers.Concrete.SessionManager;
 
 import static Data.Enums.EMessage.UnknownCommand;
 
 public class GeneralController extends BasicController {
-    private GeneralManager manager = new GeneralManager();
     public void requestAction() {
         if (!SessionManager.isLoggedIn()) {
             printer.printGenericMenu();

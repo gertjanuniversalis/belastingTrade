@@ -26,6 +26,8 @@ public class SearchController extends BasicController {
                 case PriceRange:
                     new SearchManager().searchProductByPriceRange();
                     break;
+                case Back:
+                    return;
                 default:
                     printer.print(UnknownCommand);
             }

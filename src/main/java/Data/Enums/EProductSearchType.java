@@ -3,7 +3,7 @@ package Data.Enums;
 public enum EProductSearchType {
     Name,
     Category,
-    PriceRange;
+    PriceRange, Back;
 
     private static EProductSearchType[] searchTypes = values();
     public static EProductSearchType fromOrdinal(int n){return searchTypes[n];}

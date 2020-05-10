@@ -6,6 +6,7 @@ import Exceptions.ProductNotFoundException;
 import Managers.Concrete.SessionManager;
 
 import javax.persistence.Query;
+import java.io.NotActiveException;
 import java.util.List;
 
 public class ProductDAO extends DAOBase {

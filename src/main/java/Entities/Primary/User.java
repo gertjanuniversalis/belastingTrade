@@ -35,7 +35,7 @@ public class User {
     protected EGender gender;
     @Getter @Setter
     @Enumerated(value = STRING)
-    protected EAccountType accountType;
+    protected EAccountType accountType = EAccountType.User;
     @Getter @Setter
     @Enumerated(value = STRING)
     protected ELanguage language = ELanguage.English;
@@ -59,6 +59,8 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.MERGE)
     Set<MediaFile> media;
+
+    public User(){}
 
     public User(String email, String name, EGender gender, ELanguage language){
         this.email = email;

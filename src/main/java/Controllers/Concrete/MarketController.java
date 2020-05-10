@@ -38,6 +38,8 @@ public class MarketController extends BasicController {
                 case Buy_all_selected:
                     buyAll();
                     break;
+                case Back:
+                    break;
                 default:
                     printer.print(UnknownCommand);
             }

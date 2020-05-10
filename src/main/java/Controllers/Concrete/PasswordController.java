@@ -46,7 +46,9 @@ public class PasswordController extends DAOBase {
 
     private String generatePassword(User user) {
         int userHash = Objects.hash(user, user.getId());
-        return "" + userHash;
+        String longPass =  "" + userHash;
+        String shortPass = longPass.substring(1,5);
+        return shortPass;
     }
 
     public void changePassword(String newPassword) {
